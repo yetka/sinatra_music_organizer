@@ -2,6 +2,9 @@ require('rspec')
 require('music_organizer')
 
 describe("Artist") do
+  before() do
+    Artist.clear()
+  end
 
   describe("#name") do
     it("returns the name of an artist") do
@@ -21,6 +24,15 @@ describe("Artist") do
       new_artist = Artist.new({:name=> "Riverside", :genre=> "rock"})
       new_artist.save()
       expect(Artist.all()).to(eq([new_artist]))
+    end
+  end
+
+  describe(".clear") do
+    it("clears all artists from the list") do
+      new_artist = Artist.new({:name=> "Riverside", :genre=> "rock"})
+      new_artist.save()
+      Artist.clear()
+      expect(Artist.all()).to(eq([]))
     end
   end
 

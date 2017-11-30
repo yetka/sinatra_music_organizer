@@ -21,4 +21,8 @@ class Artist
     @@list.push(self)
   end
 
+  def self.clear()
+    @@list = []
+  end
+
 end
