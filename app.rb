@@ -23,3 +23,8 @@ get('/artist/:id') do
   @artist = Artist.find(params[:id])
   erb(:artist)
 end
+
+get ('/list') do
+  @list = Artist.all()
+  erb(:list)
+end
