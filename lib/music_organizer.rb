@@ -14,7 +14,11 @@ class Artist
   end
 
   def self.all()
-    @@list = []
+    @@list
+  end
+
+  def save()
+    @@list.push(self)
   end
 
 end

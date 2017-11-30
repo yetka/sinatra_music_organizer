@@ -16,4 +16,12 @@ describe("Artist") do
     end
   end
 
+  describe("#save") do
+    it("saves new artist to the list") do
+      new_artist = Artist.new({:name=> "Riverside", :genre=> "rock"})
+      new_artist.save()
+      expect(Artist.all()).to(eq([new_artist]))
+    end
+  end
+
 end
