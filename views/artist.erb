@@ -1,0 +1,16 @@
+<h2><%= @artist.name() %></h2>
+<h4>Genre: <%= @artist.genre() %></h4>
+
+
+<form action="/artist/<%= @artist.id %>" method="post">
+  <h3>Add album to the artist</h3>
+  <div class="form-group">
+    <label for="title">Album Title </label>
+    <input id="title" name="title" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="date">Date of Release </label>
+    <input id="date" name="date" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Add!</button>
+</form>
