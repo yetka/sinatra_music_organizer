@@ -36,4 +36,26 @@ describe("Artist") do
     end
   end
 
+  describe("#id") do
+    it("increments an id by 1 each time a new artist is added") do
+      new_artist1 = Artist.new({:name=> "Riverside", :genre=> "rock"})
+      new_artist1.save()
+      new_artist2 = Artist.new({:name=> "Queen", :genre=> "rock"})
+      new_artist2.save()
+      expect(new_artist1.id()).to(eq(1))
+      expect(new_artist2.id()).to(eq(2))
+    end
+  end
+
+  describe(".find") do
+    it("finds an new artist based on its id") do
+      new_artist1 = Artist.new({:name=> "Riverside", :genre=> "rock"})
+      new_artist1.save()
+      new_artist2 = Artist.new({:name=> "Queen", :genre=> "rock"})
+      new_artist2.save()
+      expect(Artist.find(1)).to(eq(new_artist1))
+      expect(Artist.find(2)).to(eq(new_artist2))
+    end
+  end
+
 end

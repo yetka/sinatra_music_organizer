@@ -25,4 +25,13 @@ class Artist
     @@list = []
   end
 
+  def self.find(id)
+    artist_id = id.to_i()
+    @@list.each do |artist|
+      if artist.id == artist_id
+        return artist
+      end
+    end
+  end
+
 end
