@@ -1,7 +1,7 @@
 require('sinatra')
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
-require('./lib/music_organizer')
+require('./lib/artist')
 require('pry')
 
 get('/') do

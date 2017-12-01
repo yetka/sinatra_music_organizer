@@ -1,5 +1,5 @@
 require('rspec')
-require('music_organizer')
+require('artist')
 
 describe("Artist") do
   before() do

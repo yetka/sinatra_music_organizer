@@ -34,4 +34,8 @@ class Artist
     end
   end
 
+  def add_album(album)
+    @album.push(album)
+  end
+
 end
