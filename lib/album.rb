@@ -1,6 +1,6 @@
 class Album
   attr_accessor :title
-  attr_accessor :dte
+  attr_accessor :date
 
 
   def initialize(attributes)

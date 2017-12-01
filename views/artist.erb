@@ -1,5 +1,9 @@
 <h2><%= @artist.name() %></h2>
 <h4>Genre: <%= @artist.genre() %></h4>
+<% if @artist.album.any? %>
+<h4>Album Title: <%= @artist.album[0].title %></h4>
+<h4>Date of Release: <%= @artist.album[0].date %></h4>
+<% end %>
 
 
 <form action="/artist/<%= @artist.id %>" method="post">
